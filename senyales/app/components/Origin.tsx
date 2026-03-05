@@ -29,5 +29,3 @@ export default function Origin() {
     </section>
   );
 }
-import HiddenSign from "./HiddenSign"
-<HiddenSign />

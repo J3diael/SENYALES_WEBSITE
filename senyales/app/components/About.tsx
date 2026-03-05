@@ -23,7 +23,3 @@ export default function About() {
     </section>
   );
 }
-import Reveal from "./Reveal"
-<Reveal>
-  <h2 className="text-3xl font-semibold">What is SENYALES?</h2>
-</Reveal>
