@@ -4,6 +4,8 @@ The landing page for **SENYALES**, a Filipino streetwear brand. *Senyales* means
 
 It's a dark, minimal page with scroll animations, a film-grain overlay and a custom cursor. It collects early-access email signups before a drop and sends visitors to the online store to buy.
 
+**🔗 Live site:** https://senyales-website.vercel.app · **Shop:** https://senyales.com
+
 **Stack:** Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Framer Motion
 
 ## Features
