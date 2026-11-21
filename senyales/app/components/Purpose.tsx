@@ -4,7 +4,7 @@ export default function Purpose() {
       <div className="max-w-xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-10">
-          Who It's For
+          Who It&apos;s For
         </h2>
 
         <ul className="space-y-4 text-gray-300">

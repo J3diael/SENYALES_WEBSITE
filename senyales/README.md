@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SENYALES: brand website
 
-## Getting Started
+The landing page for **SENYALES**, a Filipino streetwear brand. *Senyales* means "sign."
 
-First, run the development server:
+It's a dark, minimal page with scroll animations, a film-grain overlay and a custom cursor. It collects early-access email signups before a drop and sends visitors to the online store to buy.
+
+**Stack:** Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · Framer Motion
+
+## Features
+
+- **Brand story:** hero, about, origin and audience sections, revealed with scroll animations
+- **Working email signup** (`/api/subscribe`), with two ways to save signups:
+  - **Shopify:** each signup becomes a customer subscribed to email marketing and tagged `early-access`, ready for Shopify Email campaigns
+  - **Any webhook:** Google Sheets (via Apps Script), Formspree, Zapier, etc.
+- **Shop and social links** controlled by environment variables, so links can change without code changes
+- Server-side email validation, loading, success and error states, and accessible labels
+- SEO and Open Graph metadata for link previews on Facebook and Messenger
+- Custom cursor on desktop only; touch devices keep normal behavior
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd senyales
+cp .env.example .env.local   # fill in your shop link and signup destination
+npm install
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SHOP_URL` | Your online store. Shows "Shop the drop" buttons when set |
+| `NEXT_PUBLIC_INSTAGRAM_URL`, `NEXT_PUBLIC_FACEBOOK_URL`, `NEXT_PUBLIC_TIKTOK_URL` | Footer links (optional) |
+| `SHOPIFY_STORE_DOMAIN`, `SHOPIFY_ADMIN_TOKEN` | Save signups to Shopify (custom app with `write_customers` scope) |
+| `SIGNUP_WEBHOOK_URL` | Alternatively, POST signups to any webhook |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploying
 
-## Learn More
+Deploy the `senyales` folder to [Vercel](https://vercel.com). Set **Root Directory** to `senyales` and add the environment variables above.
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built by **Prince Jediael Rance**, founder of SENYALES · [GitHub](https://github.com/J3diael)

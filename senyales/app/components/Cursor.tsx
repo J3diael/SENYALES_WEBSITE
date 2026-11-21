@@ -24,7 +24,7 @@ export default function Cursor() {
         left: position.x,
         top: position.y,
       }}
-      className="fixed w-3 h-3 bg-white rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference"
+      className="custom-cursor fixed w-3 h-3 bg-white rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference"
     />
   )
 }

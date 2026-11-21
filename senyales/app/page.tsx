@@ -4,14 +4,21 @@ import Origin from "./components/Origin"
 import Purpose from "./components/Purpose"
 import EmailCapture from "./components/EmailCapture"
 import Footer from "./components/Footer"
+import Reveal from "./components/Reveal"
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <About />
-      <Origin />
-      <Purpose />
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <Origin />
+      </Reveal>
+      <Reveal>
+        <Purpose />
+      </Reveal>
       <EmailCapture />
       <Footer />
     </main>

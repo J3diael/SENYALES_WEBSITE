@@ -13,12 +13,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+const description =
+  "SENYALES is a Filipino streetwear brand. Every piece carries a message. Join the first drop."
+
+export const metadata: Metadata = {
   title: {
-    default: "SENYALES",
+    default: "SENYALES | The sign was sent",
     template: "%s | SENYALES",
   },
-  description: "Modern streetwear brand.",
+  description,
+  openGraph: {
+    title: "SENYALES",
+    description,
+    type: "website",
+    siteName: "SENYALES",
+  },
 };
 
 export default function RootLayout({
@@ -29,10 +38,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-  {children}
-  <div className="grain"></div>
+        {children}
+        <div className="grain" aria-hidden="true"></div>
         <Cursor />
-</body>
+      </body>
     </html>
   );
 }
